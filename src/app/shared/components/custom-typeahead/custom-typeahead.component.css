@@ -1,0 +1,5 @@
+/deep/ .dropdown-menu {
+  max-height: 400px;
+  overflow: auto;
+  padding: 2px 0
+}

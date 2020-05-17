@@ -1,0 +1,24 @@
+<div class="row">
+    <div class="col-md-8">
+        <div *ngIf="isUniversityAdmin" class="form-inline filter">
+            <div class="form-group" style="margin-right:5px;">
+                <div ngbDropdown>
+                    <button class="btn btn-outline-primary" style="line-height:21px" id="dropdownBasic1"
+                        ngbDropdownToggle>{{selectedCollege.name}}</button>
+                    <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                        <button class="dropdown-item" *ngFor="let college of colleges"
+                            (click)="changeCollege(college)">{{college.name}}</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="pull-right filter">
+            <a href="javascript:void(0)" (click)="newUser()">
+                <i class="fa fa-plus-circle"></i> New User
+            </a>
+        </div>
+    </div>
+</div>
+<custom-data-table [rows]="rows" [columns]="columns"></custom-data-table>

@@ -1,0 +1,38 @@
+<div class="d-flex justify-content-between">
+  <div>    
+      <span class="page-counts" *ngIf="count > 0">
+        {{ getMin() }} to {{ getMax() }} of
+        <span *ngIf="getMax() != count"> {{count}} </span>
+        <span *ngIf="getMax() == count"> all </span>
+      </span>
+      <span class="page-counts" *ngIf="count <= 0">&nbsp; &nbsp; No result to show</span>    
+  </div>
+  <div *ngIf="totalPages() > 0">    
+      <button href="javascript:void(0)" class="btn-link" (click)="onFirst(1)" [disabled]="page === 1 || loading" [ngClass]="{ 'disabled': page === 1 || loading }">         <i class="fa fa-step-backward fa-fw"></i></button>
+      <button href="javascript:void(0)" class="btn-link" (click)="onPrev()" [disabled]="page === 1 || loading" [ngClass]="{ 'disabled': page === 1 || loading }">         <i class="fa fa-chevron-circle-left fa-fw"></i></button>
+      Page {{page}} of {{totalPages()}}
+      <button href="javascript:void(0)" class="btn-link" (click)="onNext(true)" [disabled]="lastPage() || loading" [ngClass]="{ 'disabled': lastPage() || loading }">         <i class="fa fa-chevron-circle-right fa-fw"></i></button>
+      <button href="javascript:void(0)" class="btn-link" (click)="onLast(totalPages())" [disabled]="lastPage() || loading" [ngClass]="{ 'disabled': lastPage() || loading }"><i class="fa fa-step-forward fa-fw"></i></button>
+    </div>
+</div>
+
+
+<!--
+<div>
+  <br />
+  <button href="javascript:void(0)" class="btn-link" (click)="onFirst(1)" [disabled]="page === 1 || loading" [ngClass]="{ 'disabled': page === 1 || loading }">         <i class="fa fa-step-backward fa-fw"></i></button>
+  <button href="javascript:void(0)" class="btn-link" (click)="onPrev()" [disabled]="page === 1 || loading" [ngClass]="{ 'disabled': page === 1 || loading }">         <i class="fa fa-chevron-circle-left fa-fw"></i></button>
+
+  <button class="btn-link" *ngFor="let pageNum of getPages()"
+          (click)="onPage(pageNum)"
+          [ngClass]="{'active': pageNum === page, 'disabled': loading}">
+    {{ pageNum }}
+  </button>
+
+<button href="javascript:void(0)" class="btn-link" (click)="onNext(true)" [disabled]="lastPage() || loading" [ngClass]="{ 'disabled': lastPage() || loading }">         <i class="fa fa-chevron-circle-right fa-fw"></i></button>
+<button href="javascript:void(0)" class="btn-link" (click)="onLast(totalPages())" [disabled]="lastPage() || loading" [ngClass]="{ 'disabled': page === lastPage() || loading }"><i class="fa fa-step-forward fa-fw"></i></button>
+<br />
+
+
+</div>
+-->

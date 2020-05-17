@@ -1,0 +1,137 @@
+@import 'assets/styles/alertify.core.css';
+@import 'assets/styles/alertify.bootstrap3.css';
+@import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  color: #455a64;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 21px;
+  line-height: 30px;
+}
+
+form label {
+  font-weight: 400;
+}
+
+html body {
+  padding:0;
+  margin:0;
+}
+
+body {
+  background: #fff;
+  font-family: Roboto,sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+  color: #67757c;
+  font-weight: 300;
+  font-size: 14px;  
+}
+
+.m-b-20 {
+  margin-bottom: 20px;
+}
+
+.form-control {
+  color: #67757c;
+  min-height: 38px;
+  display: initial;
+  font-size: 14px;
+}
+
+input.ng-touched.ng-invalid, input.ng-invalid.has-error, select.ng-invalid.has-error {
+  border-color: #fbcfce;
+  border-left: 4px solid #fbcfce;
+}
+
+.form-control {
+  width: 100%;
+  height: calc(2.25rem + 2px);
+  padding: .375rem .75rem;
+  line-height: 1.5;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.has-success .form-control {
+  border-color: #06d79c;
+}
+
+input.form-control {
+  border-left-width: 5px;
+}
+
+.awaiting-status {
+  color: lightgrey;
+}
+
+.inprogress-status, .starting-status, .running-status, .delivery-status {
+  color: blue;
+}
+
+.inprogresswithfailure-status, .queued-status {
+  color: sandybrown;
+}
+
+.succeeded-status {
+  color: green;
+}
+
+.failed-status, .failure-status, .stopped-status {
+  color: red;
+}
+
+.small-dropdown .dropdown-item {
+  font-size: 13px;
+  padding: 4px 1rem;
+  font-family: Roboto,sans-serif;
+}
+
+body > div.dropup {
+  z-index:1050;
+}
+body > div.dropdown {
+  z-index: 1050;
+}
+
+.hide-arrow::after {
+  display: none !important;
+}
+
+.ng2-smart-actions {
+  white-space: nowrap !important;
+  vertical-align: middle;
+}
+
+.ng2-smart-actions-title {
+  white-space: nowrap !important;
+  vertical-align: middle;
+}
+
+ng2-smart-table tbody > tr:last-child:not([class]) {
+  display: none;
+}
+
+@media (min-width: 576px) {
+  .modal-dialog.modal-lg {
+    max-width: 95%;
+  }
+}
+
+@media (min-width: 850px) {
+  .modal-dialog.modal-lg {
+    max-width: 800px;
+  }
+}
+.input-height {
+  height: calc(1.5em + 0.75rem + 2px);
+}
+

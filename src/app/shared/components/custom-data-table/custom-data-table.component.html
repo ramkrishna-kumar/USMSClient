@@ -1,0 +1,23 @@
+<div #tableContainer id="tableContainer" class="tableContainer">
+  <table #table id="table" class="table" [ngStyle]="style">
+    <tr>
+      <th *ngFor="let col of columns" [ngStyle]="col.headerStyle" (click)="sort($event, col)" [id]="col.prop">
+        <div *ngIf="col.name == 'selectAllCheckBox'" class="custom-control custom-checkbox" style="margin-right:-55px;">
+          <input type="checkbox" class="custom-control-input" name="checkAll" id="checkAll" (change)="checkAll($event)" [checked]="isChecked" />
+          <label class="custom-control-label check" for="checkAll"></label>
+        </div>
+        <!--<div *ngIf="col.name != 'selectAllCheckBox'" [innerHTML]="col.breakAtPipe ? (isBreakWords ? replacePipe(col.name) : col.name.replace('|','')) : col.name"></div>-->
+        <div *ngIf="col.name != 'selectAllCheckBox'" [innerHTML]="getColumnHeader(col)"></div>
+      </th>
+    </tr>
+    <tr *ngFor="let row of data;let isOdd=odd;" [class.alt]="isOdd">
+      <td *ngFor="let col of columns" [ngStyle]="col.cellStyle">
+        <ng-template [ngTemplateOutlet]="col.cellTemplate" [ngTemplateOutletContext]="{row: row, value:row[col.prop]}"></ng-template>
+        <ng-container *ngIf="!col.cellTemplate">{{row[col.prop]}}</ng-container>
+      </td>
+    </tr>
+  </table>
+</div>
+<!--<div>{{test1()}}</div>
+<div>{{test2()}}</div>
+<div>{{test3()}}</div>-->

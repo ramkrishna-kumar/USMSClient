@@ -1,0 +1,14 @@
+.active {
+  font-weight: 900;
+  padding: 2px;
+}
+
+.pagination {  
+  height: 50px;
+  align-content: center
+}
+
+.btn-link {
+  border: 0px;
+  background-color: transparent;
+}

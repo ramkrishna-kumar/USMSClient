@@ -1,0 +1,13 @@
+
+<div>
+  <input id="support" class="form-control" type="text" [(ngModel)]="value" [ngbTypeahead]="searchSupporter" (focus)="focus$.next($event.target.value)"
+         (click)="click$.next($event.target.value)" #instance="ngbTypeahead" (keydown)="keydown($event)"
+         [name]="name" (blur)="onBlur()" [resultFormatter]="formatMatches" [inputFormatter]="formatMatches" (selectItem)="selectedItem($event)"
+         contenteditable="false" [resultTemplate]="rt" placeholder="{{placeholderString}}" [disabled]="isDisabled" [placement]="placement" />
+  <ng-template #rt let-r="result" let-t="term">
+    <ng-container *ngIf="getDataItem(r); let u">
+      <img *ngIf="u.imageUrl" [src]="getImageUrl(u.imageUrl)" class="mr-1" style="width: 16px">
+      <ngb-highlight result="{{u.displayName}}" [term]="t"></ngb-highlight>
+    </ng-container>
+  </ng-template>
+</div>

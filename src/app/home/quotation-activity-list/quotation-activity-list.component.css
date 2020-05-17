@@ -1,0 +1,17 @@
+.dropdown-divider {
+    margin: 0px;
+  }
+  
+  .datatable-footer {
+    display: none !important
+  }
+  
+  .top {
+    z-index: 10;
+  }
+  
+  .dropdown-toggle::after {
+    display: none;
+  }
+  
+  

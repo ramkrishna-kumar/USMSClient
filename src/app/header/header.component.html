@@ -1,0 +1,59 @@
+<nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+    <span class="navbar-brand"><img width="35" height="30" src="assets/images/ignou_l.png"/></span>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+  
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/home">home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/orders">Orders</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/products">Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/users">Users</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/suppliers">Suppliers</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/colleges">Colleges</a>
+        </li>
+      </ul>
+      <!--<div class="navbar-text" style="margin-right: 200px; color: white;">
+         <span style="font-size: small; font-style: italic; text-decoration: underline; font-weight: 100 !important;">The people's university</span>
+      </div>-->
+      <!--<span class="badge badge-warning" style="margin-right: 20px;"><a href="#" style="color: #ffffff;">Administration</a></span>-->
+      <button type="button" class="btn btn-warning" style="margin-right: 20px; color: white; background-color: transparent;" routerLink="/administration">Administration</button>
+      <div class="btn-group">
+        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Susmita Kumari
+        </button>
+        <div class="dropdown-menu dropdown-menu-right">
+          <button class="dropdown-item" type="button">Name/Role</button>
+          <button class="dropdown-item" type="button">Profile</button>
+          <button class="dropdown-item" type="button">Change Password</button>
+          <button class="dropdown-item" type="button" (click)="logout()">Log Out</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  
+<div *ngIf="hasCurrentUser" class="container-fluid">
+  <breadcrumb></breadcrumb>
+</div>
+<div *ngIf="!hasCurrentUser" class="container-fluid">
+  <br />
+</div>
+
+<div class="container-fluid">    
+    <router-outlet></router-outlet>
+</div>
+  

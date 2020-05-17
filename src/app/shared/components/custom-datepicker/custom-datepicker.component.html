@@ -1,0 +1,14 @@
+<div class="input-group">
+  <input class="form-control"
+         [required]="required"
+         [placeholder]="startDateFormat"
+         [name]="name"
+         [(ngModel)]="selectedDate"
+         ngbDatepicker #d="ngbDatepicker"
+         (change)="onDateChange($event.target.value)"
+         (dateSelect)="onDateSelect($event)">
+  <div class="input-group-append">
+    <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button"></button>
+  </div>
+</div>
+

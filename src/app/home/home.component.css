@@ -1,0 +1,60 @@
+@media (max-width: 550px) {
+    .hide-logo-text {
+      display:none;
+    }
+  }
+  
+  @media (max-width: 860px) {
+    .hide-menu-text {
+      display: none;
+    }
+    .menu-dropdown::after {
+      display: none;
+    }
+  }
+  
+  .bg-light {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+  }
+  
+  .user-dropdown::after {
+    display: none;
+  }
+  
+  .static-menu {
+    color: rgba(0, 0, 0, 0.5);
+    padding: 0.25rem 1.5rem;
+    font-weight: 400;
+    white-space:nowrap;
+  }
+  
+  .navbar-brand {
+    color: rgba(0, 0, 0, 0.7);
+  }
+  
+  .border-md-right {
+    border-right: 1px solid silver;
+  }
+  
+  .fa-margin {
+    margin-right: 10px;
+  }
+  
+  .btn-group-xs > .btn, .btn-xs {
+    padding: .5rem .3rem;
+    font-size: .775rem;
+    font-weight: 600;
+    line-height: .5;
+    border-radius: .2rem;  
+  }
+  
+  .button {
+    padding: .3rem .4rem;
+    display: inline;
+    border-radius: .2rem;  
+    font-size: .775rem;
+    line-height: .5;  
+    color: white;    
+    box-sizing: content-box;
+  }
+  
