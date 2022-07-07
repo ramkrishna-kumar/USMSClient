@@ -38,7 +38,7 @@
     "file-saver": "^2.0.2",
     "font-awesome": "^4.7.0",
     "guid-typescript": "^1.0.9",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "moment-duration-format": "^2.2.2",
     "moment-timezone": "^0.5.26",
     "ng-multiselect-dropdown": "^0.2.3",
